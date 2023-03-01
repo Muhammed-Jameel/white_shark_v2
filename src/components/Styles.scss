@@ -1,0 +1,267 @@
+@import "../index";
+
+#Primarybtn {
+  background-color: $primaryColor;
+  border-radius: 15px;
+  border-color: transparent;
+  width: 215px;
+  height: 64px;
+  position: absolute;
+  left: 3rem;
+
+  -webkit-box-shadow: 0px 0px 60px 10px rgba(64, 84, 146, 0.5);
+  -moz-box-shadow: 0px 0px 60px 10px rgba(64, 84, 146, 0.5);
+  box-shadow: 0px 0px 60px 10px rgba(64, 84, 146, 0.5);
+
+  p {
+    color: $textcolor;
+  }
+
+  &:hover {
+    background-color: $textcolor;
+    transition: 0.5s;
+
+    p {
+      color: $primaryColor;
+    }
+  }
+}
+
+.navbar-container {
+  @include flexCenter;
+  margin-top: 1rem;
+  width: 100vw;
+}
+
+.navbar-links {
+  @include flexCenter;
+  margin: 1rem;
+  width: 80%;
+  justify-content: space-between;
+
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.sections {
+  @include flexCenter;
+}
+
+.navbar-link {
+  @include navBarFont;
+}
+
+.navbar-logo {
+  margin-left: 2rem;
+}
+
+.signing-link {
+  background: rgba(64, 84, 146, 0.1);
+  border: 1px solid #405492;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  margin-top: 0.75rem;
+
+  p {
+    color: $primaryColor;
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: $primaryColor;
+    p {
+      color: $textcolor;
+    }
+  }
+}
+
+.discount-container {
+  
+  // this to make the text centered
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+  // the auto margin is to make this div centered horizontally
+  margin:  0 auto 20% auto;
+  width: 70vw;
+  height: 20vh;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, $primaryColor, $accentColor);
+  border-radius: 10px;
+  background-image: url(../assets/images/webp/discountimage.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  
+
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    width: 50vw;
+    color: $textcolor;
+    text-align: center;
+  }
+
+  &:hover {
+    transition: 0.6s;
+    transition-timing-function: ease-in-out;
+    width: 75vw;
+    height: 33vh;
+  }
+}
+
+.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-container {
+    justify-content: space-between;
+    a:link {
+      text-decoration: none;
+    }
+  }
+  .navbar-links {
+    display: none;
+  }
+
+  .toggle-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 1rem 3rem;
+    flex: 1;
+  }
+
+
+  #Primarybtn{
+    position: relative;
+   left: 30%;
+   }
+ 
+   .discount-container{
+    margin-top: 30%;
+     h1 {
+       font-size: 28px;
+       line-height: 48px;
+       text-align: center;
+     }
+   }
+
+   .footer-container{
+    margin: 0%;
+
+    .footer-logo-side {
+      align-items: center;
+      margin: 0%;
+    }
+  
+    .footer-links-side{
+      background-color: $textcolor;
+      margin: 0%;
+      flex-direction: column;
+      align-items: center;
+      
+  
+      a {
+        p{
+          text-align: center;
+        }
+      }
+    }
+    
+   }
+ 
+   
+
+  .sections {
+    flex-direction: column;
+    background-color: $primaryColor;
+    border-radius: 10px;
+  }
+}
+
+.footer-container {
+  background-color: $textcolor;
+  height: 35vh;
+
+  .footer-logo-side {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 0 1rem;
+
+    .footer-logo {
+      width: 50%;
+      height: 40%;
+      background-color: $bgcolor;
+    }
+
+    p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: left;
+    }
+  }
+
+  .footer-links-side {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+
+    h3 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 48px;
+      columns: $bgcolor;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-align: left;
+      margin: 2rem 0;
+
+      p {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $bgcolor;
+
+        &:hover {
+          transition: 0.6s;
+          color: $primaryColor;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  a:link {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+
+  
+}
