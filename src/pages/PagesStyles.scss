@@ -186,6 +186,7 @@
 
     a {
       text-decoration: none;
+      margin: 2rem 0;
       color: $primaryColor;
       font-family: "Poppins";
       font-style: normal;
@@ -195,12 +196,22 @@
       margin-top: 1rem;
 
       &:hover {
-        transition: 0.5s;
+        transition: 1s;
         font-size: 22px;
         background-color: $accentColor;
         width: 35%;
+        text-align: center;
+       
       }
     }
+  }
+
+  .trainer-image {
+   
+    img {
+      width: 100%;
+    }
+   
   }
 
   .class-video {
@@ -210,8 +221,88 @@
   }
 }
 
-
-
 @media screen and (max-width: 900px) {
+
+  .class-text {
+    text-align: center;
+    p {
+      width: 80vw;
+    }
+  }
+  
+}
+
+
+
+
+//////////////////// BMI Page /////////////////
+
+.bmi-result-place {
+  width: auto;
+  
+
+}
+
+
+//////////////// Register apge //////////////////
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .register-form {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Poppins";
+      font-style: normal;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      width: 20vw;
+      
+      margin-right: 3rem;
+      margin-bottom: 3rem;
+      
+    }
+
+    .btn {
+      align-self: center;
+      justify-self: center;
+      margin-bottom: 1.5rem;
+      color: $textcolor;
+      background-color: $primaryColor;
+    }
+  }
+
+  margin: 5rem;
+
+  input {
+    width: 25vw;
+    height: 3rem;
+    margin: 8px 0 24px 0;
+    
+    background-color: $secondaryColor;
+    border: 3px;
+    border-radius: 6px;
+    border-color: $primaryColor;
+  }
+
+  h1, p, div, label, button {
+    color: $textcolor;
+  }
+
+  .other-sign-link {
+    a {
+      text-decoration: none;
+      color: $primaryColor;
+    }
+    
+  }
+
   
 }
