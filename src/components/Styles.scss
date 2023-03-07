@@ -31,6 +31,15 @@
   @include flexCenter;
   margin-top: 1rem;
   width: 100vw;
+  top: 0;
+  position: sticky;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-links {
@@ -50,6 +59,12 @@
 
 .navbar-link {
   @include navBarFont;
+
+  &:hover {
+    color: $textcolor;
+    font-size: 22px;
+    transition: 0.5s;
+  }
 }
 
 .navbar-logo {
@@ -78,15 +93,13 @@
 }
 
 .discount-container {
-  
   // this to make the text centered
   display: flex;
   justify-content: center;
   align-items: center;
- 
 
   // the auto margin is to make this div centered horizontally
-  margin:  0 auto 20% auto;
+  margin: 0 auto 20% auto;
   width: 70vw;
   height: 20vh;
   border: 3px solid;
@@ -97,8 +110,6 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  
 
   h1 {
     font-family: "Poppins";
@@ -136,58 +147,56 @@
 
   .toggle-menu {
     display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 999;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     margin: 1rem 3rem;
-    flex: 1;
   }
 
-
-  #Primarybtn{
+  #Primarybtn {
     position: relative;
-   left: 30%;
-   }
- 
-   .discount-container{
-    margin-top: 30%;
-     h1 {
-       font-size: 28px;
-       line-height: 48px;
-       text-align: center;
-     }
-   }
+    left: 30%;
+  }
 
-   .footer-container{
+  .discount-container {
+    margin-top: 30%;
+    h1 {
+      font-size: 28px;
+      line-height: 48px;
+      text-align: center;
+    }
+  }
+
+  .footer-container {
     margin: 0%;
 
     .footer-logo-side {
       align-items: center;
       margin: 0%;
     }
-  
-    .footer-links-side{
+
+    .footer-links-side {
       background-color: $textcolor;
-      margin: 0%;
+      margin: 0rem;
       flex-direction: column;
       align-items: center;
-      
-  
+
       a {
-        p{
+        p {
           text-align: center;
         }
       }
     }
-    
-   }
- 
-   
+  }
 
   .sections {
     flex-direction: column;
     background-color: $primaryColor;
     border-radius: 10px;
+    width: 75vw;
   }
 }
 
@@ -222,7 +231,6 @@
   .footer-links-side {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 1rem;
 
     h3 {
       font-family: "Poppins";
@@ -261,7 +269,4 @@
 }
 
 @media screen and (max-width: 900px) {
-
-
-  
 }

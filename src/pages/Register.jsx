@@ -120,7 +120,7 @@ const Register = () => {
           value={password} type="password" />
  
         <button onClick={handleSubmit} className="btn" type="submit">
-          Submit
+          <Link to="/verify">Submit</Link>
         </button>
       </form>
 

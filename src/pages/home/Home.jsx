@@ -57,11 +57,9 @@ const Home = () => {
             <img src={TrainerSarah} alt="Sarah" />
             
             <img src={TrainerHamza} alt="Hamza" />
-            {/* <div className="names-on-images">
-              <h3 >Ahmed</h3>
-              <h3 >Sarah</h3>
-              <h3 >Hamza</h3>
-              </div> */}
+            
+  
+             
             
             
           </div>

@@ -70,29 +70,10 @@
   width: 40vw;
   height: 40vh;
 
-  // .names-on-images {
-  // position: relative;
-  //  display: flex;
-  //  justify-content: space-around;
-  //  width: 100%;
-  //  z-index: 1;
+ 
 
-  //  h3 {
-  //   position: absolute;
-  //   top: 50%;
-  //   right: 100%;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 1;
-  //   font-family: "Poppins";
-  //   font-style: normal;
-  //   font-weight: 500;
-  //   font-size: 24px;
-  //   line-height: 32px;
-  //   color: $textcolor;
-  //  }
-  // }
-
-  img {
+ img {
+   
     min-width: 0;
     flex: 1 1 10px;
     object-fit: cover;
@@ -102,8 +83,9 @@
     &:hover {
       flex: 1 1 280px;
       opacity: 1;
-    }
+    
   }
+ }
 }
 
 .landing-page-containers-margin {
@@ -201,17 +183,14 @@
         background-color: $accentColor;
         width: 35%;
         text-align: center;
-       
       }
     }
   }
 
   .trainer-image {
-   
     img {
       width: 100%;
     }
-   
   }
 
   .class-video {
@@ -222,32 +201,117 @@
 }
 
 @media screen and (max-width: 900px) {
-
-  .class-text {
-    text-align: center;
-    p {
-      width: 80vw;
+  .class-card {
+    .class-text {
+      text-align: center;
+      p {
+        width: 80vw;
+        align-self: center;
+      }
     }
   }
-  
 }
-
-
-
 
 //////////////////// BMI Page /////////////////
-
-.bmi-result-place {
+.bmi-container {
   width: auto;
-  
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
 
+  p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    width: 600px;
+    margin-top: 1rem;
+
+    color: #ffffff;
+  }
+
+  h1 {
+    color: $textcolor;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 3rem;
+  }
+
+  .bmi-calc {
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+
+    input {
+      margin-right: 2rem;
+      width: 25rem;
+      height: 3rem;
+      background: rgba(64, 84, 146, 0.5);
+      /* Main */
+      border: 1px solid #405492;
+      border-radius: 10px;
+
+      color: $textcolor;
+      padding-left: 1rem;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+
+      &::placeholder {
+        color: $textcolor;
+        padding-left: 1rem;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 300;
+      }
+    }
+
+    button {
+      width: 10em;
+      background: rgba(64, 84, 146, 0.5);
+      /* Main */
+      border: 1px solid $primaryColor;
+      border-radius: 10px;
+      color: $textcolor;
+
+      &:hover {
+        transition: 0.5s;
+        box-shadow: 0px 0px 35px -4px rgba(108, 135, 218, 0.8);
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 700px) {
+
+  .bmi-container {
+     p {
+      width: 350px;
+     }
+  }
+
+.bmi-calc {
+
+  input, button {
+    margin-top: 2.5rem;
+  }
+    flex-wrap: wrap;
+    justify-content: center !important;
+    .bmi-btn {
+    
+
+    }
+  }
+
+  
+}
 
 //////////////// Register apge //////////////////
 
 .form {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,17 +321,16 @@
     flex-direction: column;
 
     font-family: "Poppins";
-      font-style: normal;
-    
+    font-style: normal;
+
     div {
       display: flex;
       flex-direction: column;
       justify-items: center;
       width: 20vw;
-      
+
       margin-right: 3rem;
       margin-bottom: 3rem;
-      
     }
 
     .btn {
@@ -276,6 +339,19 @@
       margin-bottom: 1.5rem;
       color: $textcolor;
       background-color: $primaryColor;
+      width: 25vw;
+      height: 3rem;
+      margin-top: 2.5rem;
+
+      a {
+        text-decoration: none;
+        color: $textcolor;
+      }
+
+      &:hover {
+        transition: 0.5s;
+        box-shadow: 0px 0px 35px -4px rgba(108, 135, 218, 0.8);
+      }
     }
   }
 
@@ -285,14 +361,18 @@
     width: 25vw;
     height: 3rem;
     margin: 8px 0 24px 0;
-    
+
     background-color: $secondaryColor;
     border: 3px;
     border-radius: 6px;
     border-color: $primaryColor;
   }
 
-  h1, p, div, label, button {
+  h1,
+  p,
+  div,
+  label,
+  button {
     color: $textcolor;
   }
 
@@ -301,8 +381,5 @@
       text-decoration: none;
       color: $primaryColor;
     }
-    
   }
-
-  
 }

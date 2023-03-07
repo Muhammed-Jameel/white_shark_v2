@@ -1262,17 +1262,96 @@ select {
 }
 
 @media screen and (max-width: 900px) {
-  .class-text {
+  .class-card .class-text {
     text-align: center;
   }
-  .class-text p {
+  .class-card .class-text p {
     width: 80vw;
+    align-self: center;
   }
 }
-.bmi-result-place {
+.bmi-container {
   width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+.bmi-container p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  width: 600px;
+  margin-top: 1rem;
+  color: #ffffff;
+}
+.bmi-container h1 {
+  color: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 3rem;
+}
+.bmi-container .bmi-calc {
+  margin: 3rem 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.bmi-container .bmi-calc input {
+  margin-right: 2rem;
+  width: 25rem;
+  height: 3rem;
+  background: rgba(64, 84, 146, 0.5);
+  /* Main */
+  border: 1px solid #405492;
+  border-radius: 10px;
+  color: #fff;
+  padding-left: 1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+}
+.bmi-container .bmi-calc input::-moz-placeholder {
+  color: #fff;
+  padding-left: 1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+}
+.bmi-container .bmi-calc input::placeholder {
+  color: #fff;
+  padding-left: 1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+}
+.bmi-container .bmi-calc button {
+  width: 10em;
+  background: rgba(64, 84, 146, 0.5);
+  /* Main */
+  border: 1px solid #405492;
+  border-radius: 10px;
+  color: #fff;
+}
+.bmi-container .bmi-calc button:hover {
+  transition: 0.5s;
+  box-shadow: 0px 0px 35px -4px rgba(108, 135, 218, 0.8);
 }
 
+@media screen and (max-width: 700px) {
+  .bmi-container p {
+    width: 350px;
+  }
+  .bmi-calc {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  .bmi-calc input, .bmi-calc button {
+    margin-top: 2.5rem;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -1299,6 +1378,17 @@ select {
   margin-bottom: 1.5rem;
   color: #fff;
   background-color: #405492;
+  width: 25vw;
+  height: 3rem;
+  margin-top: 2.5rem;
+}
+.form .register-form .btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.form .register-form .btn:hover {
+  transition: 0.5s;
+  box-shadow: 0px 0px 35px -4px rgba(108, 135, 218, 0.8);
 }
 .form input {
   width: 25vw;
@@ -1309,7 +1399,11 @@ select {
   border-radius: 6px;
   border-color: #405492;
 }
-.form h1, .form p, .form div, .form label, .form button {
+.form h1,
+.form p,
+.form div,
+.form label,
+.form button {
   color: #fff;
 }
 .form .other-sign-link a {

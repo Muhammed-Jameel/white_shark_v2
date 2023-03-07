@@ -1110,6 +1110,14 @@ select {
   justify-items: center;
   margin-top: 1rem;
   width: 100vw;
+  top: 0;
+  position: sticky;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-links {
@@ -1139,6 +1147,11 @@ select {
 }
 .navbar-link:hover {
   color: #405492;
+}
+.navbar-link:hover {
+  color: #fff;
+  font-size: 22px;
+  transition: 0.5s;
 }
 
 .navbar-logo {
@@ -1213,11 +1226,13 @@ select {
   }
   .toggle-menu {
     display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 999;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     margin: 1rem 3rem;
-    flex: 1;
   }
   #Primarybtn {
     position: relative;
@@ -1240,7 +1255,7 @@ select {
   }
   .footer-container .footer-links-side {
     background-color: #fff;
-    margin: 0%;
+    margin: 0rem;
     flex-direction: column;
     align-items: center;
   }
@@ -1251,6 +1266,7 @@ select {
     flex-direction: column;
     background-color: #405492;
     border-radius: 10px;
+    width: 75vw;
   }
 }
 .footer-container {
@@ -1281,7 +1297,6 @@ select {
 .footer-container .footer-links-side {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 1rem;
 }
 .footer-container .footer-links-side h3 {
   font-family: "Poppins";
