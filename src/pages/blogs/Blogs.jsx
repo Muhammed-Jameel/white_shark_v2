@@ -3,6 +3,7 @@ import { Row, Column } from "../../components/LayoutGrid";
 import ArticlePhoto from "../../assets/photos/article3.jpg";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -13,7 +14,7 @@ const Blogs = () => {
           <h1>Why Working Out with Others Can Improve Your Health and Happiness</h1>
           
 
-          <a href="https://www.flaticon.com">Read</a>
+          <Link to="/blog">Read</Link>
         </Column>
 
         <Column span="6" className="blogs-image">

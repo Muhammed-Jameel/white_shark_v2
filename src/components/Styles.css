@@ -1095,6 +1095,7 @@ select {
   box-shadow: 0px 0px 60px 10px rgba(64, 84, 146, 0.5);
 }
 #Primarybtn p {
+  padding-top: 0.3rem;
   color: #fff;
 }
 #Primarybtn:hover {
@@ -1112,6 +1113,8 @@ select {
   width: 100vw;
   top: 0;
   position: sticky;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .sticky {
@@ -1147,11 +1150,6 @@ select {
 }
 .navbar-link:hover {
   color: #405492;
-}
-.navbar-link:hover {
-  color: #fff;
-  font-size: 22px;
-  transition: 0.5s;
 }
 
 .navbar-logo {
@@ -1233,6 +1231,9 @@ select {
     justify-content: center;
     align-items: flex-end;
     margin: 1rem 3rem;
+  }
+  .signing-link {
+    width: 75vw;
   }
   #Primarybtn {
     position: relative;

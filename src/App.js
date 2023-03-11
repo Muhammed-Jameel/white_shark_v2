@@ -1,4 +1,4 @@
-import { Home, Classes, BMI, Blogs, Trainers, Register,Login, OtpVerify } from "./pages";
+import { Home, Classes, BMI, Blogs, Trainers, Register,Login, OtpVerify, Blog } from "./pages";
 import { Route, BrowserRouter, Routes} from "react-router-dom";
 
 
@@ -18,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/verify" element={<OtpVerify/>}/>
+          <Route path="/blog" element={<Blog/>}/>
         </Routes>
       </BrowserRouter>
 

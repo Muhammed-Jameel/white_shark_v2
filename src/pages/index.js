@@ -6,3 +6,4 @@ export { default as Blogs} from './blogs/Blogs';
 export { default as Register} from './Register';
 export { default as Login} from './Login';
 export { default as OtpVerify} from './OtpVerfication';
+export { default as Blog} from './blogs/Blog';

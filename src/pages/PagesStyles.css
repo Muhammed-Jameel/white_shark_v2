@@ -1265,6 +1265,9 @@ select {
   .class-card .class-text {
     text-align: center;
   }
+  .class-card .class-text h1 {
+    font-size: 32px;
+  }
   .class-card .class-text p {
     width: 80vw;
     align-self: center;
@@ -1334,13 +1337,14 @@ select {
   border: 1px solid #405492;
   border-radius: 10px;
   color: #fff;
+  height: 3rem;
 }
 .bmi-container .bmi-calc button:hover {
   transition: 0.5s;
   box-shadow: 0px 0px 35px -4px rgba(108, 135, 218, 0.8);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .bmi-container p {
     width: 350px;
   }
@@ -1363,6 +1367,7 @@ select {
   flex-direction: column;
   font-family: "Poppins";
   font-style: normal;
+  color: #fff;
 }
 .form .register-form div {
   display: flex;
@@ -1409,4 +1414,86 @@ select {
 .form .other-sign-link a {
   text-decoration: none;
   color: #405492;
+}
+
+.blog-img {
+  margin: 0 3rem;
+  margin-top: 1rem !important;
+}
+.blog-img img {
+  height: 50vh;
+  width: 100%;
+}
+
+.blog-text {
+  margin: 0 3rem;
+  margin-top: 2rem !important;
+}
+.blog-text h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  color: #fff;
+  width: 90vw;
+}
+.blog-text p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  width: 60vw;
+  margin-top: 3rem;
+  margin-left: 30%;
+}
+.blog-text li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  width: 60vw;
+  margin-top: 2rem;
+  margin-left: 30%;
+}
+.blog-text .related-blogs {
+  border: 5px solid #405492;
+  height: 50vh;
+  margin-top: 12rem;
+  margin-left: 65%;
+}
+.blog-text .related-blogs .related-blogs-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+.blog-text .related-blogs a {
+  color: #fff;
+  text-decoration: none;
+}
+.blog-text .related-blogs a:hover {
+  color: #405492;
+  transition: 0.5s;
+}
+@media screen and (max-width: 900px) {
+  .blog-text .blog-text {
+    margin: 0 1rem;
+  }
+  .blog-text p {
+    margin-left: 0;
+    width: 80vw;
+  }
+  .blog-text li {
+    margin-left: 0;
+    width: 80vw;
+  }
+  .blog-text .related-blogs {
+    margin: 3rem 0;
+  }
 }/*# sourceMappingURL=PagesStyles.css.map */
